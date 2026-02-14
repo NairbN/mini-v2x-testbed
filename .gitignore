@@ -1,0 +1,38 @@
+# Data and outputs
+data/*.db
+data/*.log
+outputs/*.csv
+outputs/*.json
+outputs/*.png
+pcaps/*.pcap
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+*.log
+
+# Keep directory structure
+!data/.gitkeep
+!outputs/.gitkeep
+!pcaps/.gitkeep

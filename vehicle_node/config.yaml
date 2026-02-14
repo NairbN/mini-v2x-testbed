@@ -1,0 +1,19 @@
+vehicle:
+  vehicle_id: "VEH_001"
+  protocol: "UDP"  # Options: UDP, TCP, MQTT
+  telemetry_interval_ms: 100  # Send telemetry every 100ms
+  safety_interval_ms: 1000    # Send safety message every 1 second
+
+edge_server:
+  host: "edge_server"  # Docker service name
+  port: 5000
+
+mqtt:
+  broker_host: "mqtt_broker"
+  broker_port: 1883
+  username: ""
+  password: ""
+
+logging:
+  level: "INFO"
+  file: "/data/vehicle_node.log"
