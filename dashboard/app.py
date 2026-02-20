@@ -68,6 +68,15 @@ def calculate_metrics(df):
 st.title("🚗 V2X Performance & Edge Connectivity Dashboard")
 st.markdown("Real-time monitoring of Vehicle-to-Network communication metrics")
 
+# Add control center navigation
+col_nav1, col_nav2, col_nav3 = st.columns([2, 1, 1])
+with col_nav2:
+    st.page_link("pages/1_🎮_Test_Control.py", label="🎮 Test Control Center", icon="🚀", use_container_width=True)
+with col_nav3:
+    st.page_link("pages/2_📈_Results_Viewer.py", label="📈 View Results", icon="📊", use_container_width=True)
+
+st.divider()
+
 # Sidebar controls
 st.sidebar.header("⚙️ Controls")
 auto_refresh = st.sidebar.checkbox("Auto-refresh", value=True)

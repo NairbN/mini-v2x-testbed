@@ -56,8 +56,15 @@ services:
     container_name: v2x_dashboard
     ports:
       - "8501:8501"
+    cap_add:
+      - NET_ADMIN  # Enable network traffic shaping for test control
     volumes:
       - ./data:/data
+      - ./outputs:/outputs  # Read experiment results
+      - ./network_profiles:/network_profiles  # Access shell scripts
+      - ./run_experiment.sh:/app/run_experiment.sh  # Mount experiment script
+      - ./edge_server:/edge_server  # Import Database class
+      - /var/run/docker.sock:/var/run/docker.sock  # Docker control for running analytics
     networks:
       - v2x_network
     depends_on:
